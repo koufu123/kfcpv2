@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+:root {
+    --primary-color: #2a337e;
+    --primary-colorHover: #3c46a7;
+    --secondaryColor: #8f8e8e;
+    --tertiaryColor: #f1f6f1;
+    --lightBg: #e9e8e9;
+    --font1: "Anton", sans-serif;
+    --font2: "Archivo Black", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
+main {
+    flex: 1; /* This allows the main content to grow and fill available space */
+}
+
+.footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+
+/* Custom Element colors */
+h1, h2, h3, h4, h5 {
+    color: var(--primary-color) !important;
+
+}
+
+.custom-htag {
+    font-family: var(--font1);
+}
+
+.custom-ptag {
+    color: var(--primary-color);
+}
+
+.hero-font {
+    font-family: var(--font2);
+    text-shadow: #474747 3px 5px 2px;
+}
+
+.hero-text {
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5) !important;
+}
+
+/* .custom-text-shadow {
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
+} */
+
+.custom-color {
+    color: var(--primary-color);
+}
+
+.custom-color2 {
+    color: var(--primary-colorHover);
+}
+
+.custom-border {
+    border: 50px solid var(--secondaryColor) !important;
+}
+
+.bg-custom {
+    background-color: var(--lightBg);
+}
+.bg-custom2 {
+    background-color: var(--primary-color) !important;
+}
+.bg-custom3 {
+    background-color: var(--tertiaryColor);
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+.btn-custom {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    transition: 0.3s ease-out;
+}
+.btn-custom2 {
+    background-color: #fff !important;
+    color: #000 !important;
+    transition: 0.3s ease-out;
+}
+.btn-custom:hover {
+    background-color: var(--primary-colorHover) !important;
+}
+.btn-custom2:hover {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+.text-small {
+    font-size: smaller;
+}
+
+
+
+/* Page positioning */
+/* Navbar Styles */
+.nav-container {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+@media (max-width: 1395px) { /* For md and sm */
+    .nav-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+nav .nav-item a {
+    transition: 0.3s ease-out;
+}
+nav .nav-item .current-active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+nav .nav-item a:hover {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-menu {
+    max-width: 200px;
+    width: auto;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f1f6f1;
+}
+
+.footer ul li a i {
+    transition: 0.3s ease-out;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--secondaryColor);
+}
+
+.footer ul li a i:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color) !important;
+}
+
+@media (max-height: 992px) {
+    .footer .social-links {
+        margin-top: 20px !important;
+    }
+}
+
+.footer .container span {
+    color: var(--secondaryColor);
+}
+
+
+
+/* Sliding LogoHeadlines styles for company section in footer */
+@keyframes slides {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+    background: whitesmoke;
+}
+
+.logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo_items {
+    display: inline-block;
+    animation: 30s slides infinite linear;
+    cursor: pointer;
+    transition: animation-play-state 0.5s ease; /* Smooth transition */
+}
+
+.logos:hover .logo_items {
+    animation-play-state: paused; /* Pause the animation */
+}
+
+.logo_items img {
+    height: 75px;
+    padding: 10px 30px;
+}
+
+
+/* Partner comments section */
+.gallery-cell {
+    width: 66%;
+    max-height: 1000px;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+}
+
+.gallery-cell .card {
+    height: 400px;
+    max-height: 1000px;
+}
+
+/* Custom Column width */
+.custom-col2 {
+    width: 13% !important;
+}
+
+/* -------------------------------- */
+/* ------------Static CSS---------- */
+/* -------------------------------- */
+
+/* Inquire page */
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    border-radius: 50%; /* Make it circular */
+    background-color: var(--primary-color); /* Use your custom background color */
+    margin: 0 auto; /* Center the icon circle */
+}
+.icon-circle i {
+    font-size: 24px; /* Adjust icon size */
+}

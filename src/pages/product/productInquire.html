@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFCP Product Inquire</title>
+    <link rel="icon" href="../../assets/img/KoufuLogo.png" type="image/png">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <style>
+        .nav-container {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        @media (max-width: 1395px) { /* For md and sm */
+            .nav-container {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+        /* Page custom styles */
+        .about-container {
+            height: auto; /* Adjust height of carousel items */
+            background-size: cover;
+            background-position: center;
+            position: relative; /* For positioning overlay */
+        }
+        .btn-custom {
+          width: 100%;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          border-radius: 50px;
+        }
+        input::placeholder {
+            color: #adb5bd !important;
+        }
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="mb-4">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="../../../index.html">
+                    <img id="MDB-logo" src="../../assets/img/KouFu_Logo.png" alt="MDB Logo" draggable="false" height="75" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                          <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                          <ul class="dropdown-menu">
+                              <li><a id="aboutHistory" class="dropdown-item" href="../about/aboutHistory.html">History</a></li>
+                              <li><a id="aboutCertifications" class="dropdown-item" href="../about/aboutHistory.html">Certifications</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 current-active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="industrial" class="dropdown-item" href="./industrial.html">Industrial Packaging</a></li>
+                                <li><a id="food" class="dropdown-item" href="./food.html">Food Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5" href="../faq/faq.html">FAQ</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5" href="../inquire/inquire.html">Inquire With Us</a></li>
+                        <li class="nav-item"><a id="hiring" class="nav-link mx-2 fs-5" href="../hiring/hiring.html">Hiring Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <main>
+      <!-- Hero section -->
+      <div id="hero-section" class="" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-container bg-custom p-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Image columnn -->
+                    <div class="col-lg-8 col-md-12 p-3" data-aos="fade-right" data-aos-delay="100">
+                        <h2 id="productName" class="text-center custom-htag">Sample Product</h2>
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner rounded">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img src="" id="img1" class="img-fluid" alt="First slide">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="" id="img2" class="img-fluid" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="" id="img3" class="img-fluid" alt="Third slide">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>          
+                    </div>
+
+                    <!-- Info column -->
+                    <div id="formContainer" class="col-lg-4 col-md-12 p-4">
+                        <div>
+                            <form action="">
+                                <!-- 1st row material -->
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label for="material" class="fw-bold">Material</label>
+                                        <select name="material" id="material" class="form-select" required>
+                                            <option selected disabled>--select--</option>
+                                            <option value="material-1">material-1</option>
+                                            <option value="material-2">material-2</option>
+                                            <option value="material-3">material-3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- 2nd row length, width depth -->
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <label for="length" class="fw-bold">Length(<i>mm</i>)</label>
+                                        <div class="input-group">
+                                            <input type="number" id="length" name="length" class="form-control" placeholder="input" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="width" class="fw-bold">Width(<i>mm</i>)</label>
+                                        <div class="input-group">
+                                            <input type="number" id="width" name="width" class="form-control" placeholder="input" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="depth" class="fw-bold">Depth(<i>mm</i>)</label>
+                                        <div class="input-group">
+                                            <input type="number" id="depth" name="depth" class="form-control" placeholder="input" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3rd row quantity, color  -->
+                                 <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label for="color" class="fw-bold">Color</label>
+                                        <select name="color" id="color" class="form-select" required>
+                                            <option selected disabled>--select--</option>
+                                            <option value="color-1">color-1</option>
+                                            <option value="color-2">color-2</option>
+                                            <option value="color-3">color-3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for="quantity" class="fw-bold">Quantity</label>
+                                        <select name="quantity" id="quantity" class="form-select" required>
+                                            <option selected disabled>--select--</option>
+                                            <option value="color-1">1000</option>
+                                            <option value="color-2">5000</option>
+                                            <option value="color-3">10000</option>
+                                        </select>
+                                    </div>
+                                 </div>
+
+                                 <!-- 4th row Last Name -->
+                                 <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label for="lastName" class="fw-bold">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name" required>
+                                    </div>
+                                 </div>
+
+                                 <!-- 5th row 1st name -->
+                                 <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label for="firstName" class="fw-bold">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name" required>
+                                    </div>
+                                 </div>
+
+                                 <!-- Last row Email address -->
+                                 <div class="row mb-3">
+                                    <div class="col-12">
+                                        <label for="emailAdd" class="fw-bold">Email Address</label>
+                                        <input type="email" id="emailAdd" name="emailAdd" class="form-control" placeholder="Email Address" required>
+                                    </div>
+                                 </div>
+
+                                 <!-- Quote information -->
+                                 <div class="row mb-3">
+                                    <div class="col-6">
+                                        <p class="lead fw-bold">Estimated Quote:</p>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <p class="lead fw-bold custom-color">PHP 3,293.34</p>
+
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <i class="fw-bold text-small custom-color">Please inquire with us for a customized quote. </i>
+                                    </div>
+                                 </div>
+
+                                 <!-- Submit -->
+                                 <div class="text-center">
+                                    <input type="submit" id="nextBtn" class="btn btn-custom w-50" value="Next">
+                                 </div>
+
+                            </form>
+                        </div>
+                     </div>
+
+                     <!-- Hidden confirmation section -->
+                     <div id="confirmation" class="d-none col-lg-4 col-md-12 p-4">
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">Material</p>
+                            <p id="materialConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-4">
+                                <p class="lead text-secondary fw-bold m-0">Length</p>
+                                <p id="lengthConfirm" class="lead custom-color fw-bold m-0"></p>
+                            </div>
+
+                            <div class="col-4">
+                                <p class="lead text-secondary fw-bold m-0">Width</p>
+                                <p id="widthConfirm" class="lead custom-color fw-bold m-0"></p>
+                            </div>
+
+                            <div class="col-4">
+                                <p class="lead text-secondary fw-bold m-0">Depth</p>
+                                <p id="depthConfirm" class="lead custom-color fw-bold m-0"></p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">Color</p>
+                            <p id="colorConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">Quantity</p>
+                            <p id="quantityConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">Last Name</p>
+                            <p id="lnameConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">First Name</p>
+                            <p id="fnameConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="lead text-secondary fw-bold m-0">Email Address</p>
+                            <p id="emailConfirm" class="lead custom-color fw-bold m-0"></p>
+                        </div>
+
+                        <!-- New buttons for navigation -->
+                        <div class="text-center justify-content-between d-flex mt-4">
+                            <button id="backButton" class="btn btn-custom w-50 m-2">Back</button>
+                            <button id="continueButton" class="btn btn-custom w-50 m-2">Submit Inquiry</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+      </div>
+      
+      <!-- Companies section(Reusable component) -->
+      <div id="logoHeadlines"></div>
+
+    </main>
+
+    <!-- Footer(Reusable component) -->
+    <footer id="footer" class="footer"></footer>
+
+    
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="../_components/componentLoader.js"></script>
+
+    <script src="./fetchImg.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800, // Duration of animations
+            once: true, // Whether animation should happen only once - while scrolling down
+        });
+
+        $(document).ready(function() {
+            // ------------- Page Functionalities below -----------------//
+            // Handle Next button click
+            $('.btn-custom').on('click', function(e) {
+                e.preventDefault(); // Prevent default form submission
+
+                // Gather form data
+                const material = $('#material').val();
+                const length = $('#length').val();
+                const width = $('#width').val();
+                const depth = $('#depth').val();
+                const color = $('#color').val();
+                const quantity = $('#quantity').val();
+                const lastName = $('#lastName').val();
+                const firstName = $('#firstName').val();
+                const emailAdd = $('#emailAdd').val();
+
+                // Validation: Check if any fields are empty
+                if (!material || !length || !width || !depth || !color || !quantity || !lastName || !firstName || !emailAdd) {
+                    alert("Please fill out all fields.");
+                    return; // Stop the execution if any field is empty
+                }
+
+                // Populate confirmation section
+                $('#materialConfirm').text(material);
+                $('#lengthConfirm').text(length);
+                $('#widthConfirm').text(width);
+                $('#depthConfirm').text(depth);
+                $('#colorConfirm').text(color);
+                $('#quantityConfirm').text(quantity);
+                $('#lnameConfirm').text(lastName);
+                $('#fnameConfirm').text(firstName);
+                $('#emailConfirm').text(emailAdd);
+
+                // Hide the entire form container
+                $('#formContainer').fadeOut().addClass('d-none');
+                $('#confirmation').fadeIn().removeClass('d-none');
+            });
+
+            // Handle Back button click
+            $('#backButton').on('click', function() {
+                // Show the form container and hide the confirmation section
+                $('#confirmation').fadeOut().addClass('d-none');
+                $('#formContainer').fadeIn().removeClass('d-none');
+            });
+
+            // Handle Continue button click
+            $('#continueButton').on('click', function() {
+                // Define what happens when the user clicks continue
+                window.location.href = './productInquireSuccess.html';
+            });
+        });
+
+    </script>
+</body>
+</html>
+
+<!-- Created by Ig Durian of Koufu color printing MIS Department -->

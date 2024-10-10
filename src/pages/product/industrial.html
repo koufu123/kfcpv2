@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFCP Industrial</title>
+    <link rel="icon" href="../../assets/img/KoufuLogo.png" type="image/png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Data AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .nav-container {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        @media (max-width: 1395px) {
+            .nav-container {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .industrial-container {
+            height: auto;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .btn-custom {
+            width: 100%;
+            border-radius: 50px;
+        }
+        .product-card {
+            height: 350px; /* Fixed height */
+            width: 250px;  /* Fixed width */
+        }
+        .product-card img {
+            height: 250px; /* Adjust as needed */
+            width: 100%;   /* Make image full width */
+            object-fit: cover; /* Cover the div */
+        }
+        @media (max-width: 992px) {
+          .custom-spacing {
+            display: none !important;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="mb-4">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="../../../index.html">
+                    <img id="MDB-logo" src="../../assets/img/KouFu_Logo.png" alt="MDB Logo" draggable="false" height="75" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown m-0">
+                          <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                          <ul class="dropdown-menu">
+                              <li><a id="aboutHistory" class="dropdown-item" href="../about/aboutHistory.html">History</a></li>
+                              <!-- <li><a id="aboutMiss&Vis" class="dropdown-item" href="../about/aboutV&M.html">Vision and Mission</a></li> -->
+                              <li><a id="aboutCertifications" class="dropdown-item" href="../about/aboutHistory.html">Certifications</a></li>
+                          </ul>
+                        </li>
+
+                        <li class="nav-item dropdown m-0">
+                            <a class="nav-link dropdown-toggle fs-5 current-active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="industrial" class="dropdown-item current-active" href="./industrial.html">Industrial Packaging</a></li>
+                                <li><a id="food" class="dropdown-item" href="./food.html">Food Packaging</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a id="faq" class="nav-link mx-2 fs-5" href="../faq/faq.html">FAQ</a></li>
+                        <li class="nav-item"><a id="inquire" class="nav-link mx-2 fs-5" href="../inquire/inquire.html">Inquire With Us</a></li>
+                        <li class="nav-item"><a id="hiring" class="nav-link mx-2 fs-5" href="../hiring/hiring.html">Hiring Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+      <!-- Hero section -->
+      <div id="hero-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="industrial-container bg-custom p-5">
+          <div class="text-center">
+            <h1 class="custom-htag">Industrial Packaging</h1>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <!-- Products -->
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Colored Boxes')">Colored Boxes</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Corrugated Colored Boxes')">Corrugated Colored Boxes</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Tray')">Tray</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Display Box')">Display Box</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Master Box')">Master Box</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Manuals')">Manuals</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card">
+                  <img src="../../assets/img/productImgv2/brochure_1.webp" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Brochures')">Brochures</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Leaflets')">Leaflets</button>
+                </div>
+              </div>
+
+              <!-- Custom space to fit contents -->
+              <div class="custom-spacing custom-col2"></div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card">
+                  <img src="../../assets/img/productImgv2/flyers.webp" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Flyers')">Flyers</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card">
+                  <img src="../../assets/img/productImgv2/poster_1.webp" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Posters')">Posters</button>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 p-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card">
+                  <img src="https://placehold.co/250.webp?text=Default+Image" alt="Sample Image" class="border rounded mb-3">
+                  <button class="btn btn-custom" onclick="storeText('Stickers')">Stickers</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Companies section (Infinite linear scroll) -->
+      <div id="logoHeadlines"></div>
+
+    </main>
+
+    <!-- Footer(Reusable component) -->
+    <footer id="footer" class="footer"></footer>
+
+
+    <!-- Bootstrap 5.3.3 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Data AOS JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="module" src="../_components/componentLoader.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800, // Duration of animations
+            once: true, // Whether animation should happen only once - while scrolling down
+        });
+
+        
+        function storeText(productName) {
+            sessionStorage.setItem('selectedProduct', productName);
+            console.log('Stored:', productName); // Optional: Log to console for confirmation
+            window.location.href = './productInquire.html'; // Change to your target page
+        }
+
+        $(document).ready(function() {          
+          sessionStorage.clear();
+        });
+    </script>
+</body>
+</html>
+
+<!-- Created by Ig Durian of Koufu color printing MIS Department -->

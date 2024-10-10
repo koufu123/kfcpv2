@@ -1,5 +1,5 @@
 // Import createLogo logic
-import { createFoot } from '../_components/components.js';
+import { createFoot } from './_components/components.js';
 
 // Gets foot component
 const footer = document.getElementById('footer');
